@@ -1,0 +1,24 @@
+ # find non repeated element
+        
+        # soln 1 - O(n)
+        # put + remove from set
+        
+        temp_set = set()
+        
+        for element in nums:
+            if element not in temp_set:
+                temp_set.add(element)
+            else:
+                temp_set.remove(element)
+
+        return temp_set.pop()
+
+        # bit manipulation O(1) space
+        # a XOR 0 = a
+        # a XoR a = 0
+        
+        a = 0
+        for element in nums:
+            a ^= element;
+        return a
+        
