@@ -1,0 +1,26 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        
+        # array contains n distinct numbers between 0-n
+        # return only number in range missing 
+        
+        # size of nums
+        
+        # soln 1     O(n)
+        # create map with all numbers in range
+            # as we see each number remove and return the remaining number
+            
+        # soln 2      O(n logn)
+        # sort the nums and find the missing number
+        
+     
+        size_of_array = len(nums)
+        new_array = set()
+
+        for i in range(0,size_of_array+1):
+            new_array.add(i)
+            
+        for element in nums:
+            new_array.remove(element)
+        
+        return new_array.pop()
