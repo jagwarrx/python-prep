@@ -1,0 +1,21 @@
+# if every element is distinct return false
+# if any element is repeated return true
+
+
+# iterate through all elements
+# check in memory to see if it has been seen 
+# if yes, return false
+# else return true
+
+# [1,2,3,1]
+
+
+class Solution(object):
+    def containsDuplicate(self, nums):
+        
+        element_set = set();
+        for element in nums:
+            if element in element_set:
+                return True
+            element_set.add(element);
+        return False
