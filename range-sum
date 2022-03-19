@@ -1,0 +1,15 @@
+class NumArray(object):
+
+    def __init__(self, nums):
+        running_sum = 0
+        self.cumulative = [0]
+        for num in nums:
+            running_sum += num
+            self.cumulative.append(running_sum)    
+        """
+        :type nums: List[int]
+        """
+        
+
+    def sumRange(self, left, right):
+        return self.cumulative[right+1] - self.cumulative[left]
