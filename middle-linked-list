@@ -1,0 +1,16 @@
+class Solution(object):
+    def middleNode(self, head):
+        
+        last_pointer = head
+        count = 1
+        while last_pointer.next is not None:
+            last_pointer = last_pointer.next
+            count += 1
+        
+        start_pointer = head
+        
+        # if total is even, there are two middle nodes
+        for i in range(count / 2):
+            start_pointer = start_pointer.next
+              
+        return start_pointer
